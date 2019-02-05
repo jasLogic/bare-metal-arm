@@ -23,3 +23,6 @@ Getting started with ARM using OpenOCD and the BusPirate
 * [OpenOCD commands](http://www.openocd.org/doc/html/General-Commands.html) and [Flash commands](http://www.openocd.org/doc/html/Flash-Commands.html)
 * [A great blog post on how to use and connect the BusPirate](https://research.kudelskisecurity.com/2014/05/01/jtag-debugging-made-easy-with-bus-pirate-and-openocd/)
 * [This StackOverlow question](https://stackoverflow.com/questions/38033130/how-to-use-the-gdb-gnu-debugger-and-openocd-for-microcontroller-debugging-fr) had some good information (especially the part with the Makefile)
+* [This Article is very informative](https://www.embedded.com/design/mcus-processors-and-socs/4007119/Building-Bare-Metal-ARM-Systems-with-GNU-Part-1--Getting-Started)
+* [STM32F103x8 datasheet](https://www.st.com/resource/en/datasheet/stm32f103tb.pdf)
+* [RM0008 Reference manual](https://www.st.com/content/ccc/resource/technical/document/reference_manual/59/b9/ba/7f/11/af/43/d5/CD00171190.pdf/files/CD00171190.pdf/jcr:content/translations/en.CD00171190.pdf)
