@@ -8,7 +8,6 @@ Getting started with ARM using OpenOCD and the BusPirate
 **TODO**
   1. How to install arm-none-eabi toolchain
   2. Installing OpenOCD
-  3. Updating and setting up the BusPirate
   4. First Program and Linkerscript (in progress)
   5. Blinking a LED
   6. Blinking in C

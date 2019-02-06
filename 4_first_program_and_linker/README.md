@@ -1,5 +1,20 @@
 # First Program and Linkerscript
 
+## Connecting the Bus Pirate to the STM32F103x8
+According to [this table for Bus Pirate to JTAG](http://dangerousprototypes.com/docs/Bus_Pirate_JTAG_connections_for_OpenOCD)
+and [the STM32F103x8 datasheet](https://www.st.com/resource/en/datasheet/stm32f103tb.pdf)
+(page 28-33) we connect the Bus Pirate to the microcontroller like this:
+
+| Bus Pirate | JTAG  | STM32f1x |
+|------------|-------|----------|
+| VPU        | VTref | 3v3      |
+| GND        | GND   | GND      |
+| MOSI       | TDI   | PA15     |
+| MISO       | TDO   | PB3      |
+| CLK        | TCK   | PA14     |
+| CS         | TMS   | PA13     |
+| AUX        | SRST  | PB4      |
+
 ## Compile, Link and Copy
 ### Compile
 ```
@@ -33,6 +48,7 @@ $ telnet localhost 4444
 > reset
 > flash write_image erase main.bin 0x8000000
 ```
+You now need to reset the board manually.
 
 ## Check with GDB
 ```
@@ -76,6 +92,6 @@ pc             0x800004c           0x800004c
 ```
 Notice that r0 incremented by one and that r1 is 42 which we set in main.s.
 Also take a look at the sp (stack pointer), it has the value which we defined
-at address `0x8000000` with `_stack_top`.
+at address `0x8000000` with `__StackTop`.
 Another interesting thing to know is the pc (program counter).
 Its value is always the address of the instrucion which is executed at the time.

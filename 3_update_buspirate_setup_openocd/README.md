@@ -1,8 +1,8 @@
-# Updating the BusPirate and setting up OpenOCD
+# Updating the Bus Pirate and setting up OpenOCD
 
-## Updating the BusPirate
+## Updating the Bus Pirate
 
-Since most BusPirates are shipped with old firmware, we need to update to at
+Since most Bus Pirates are shipped with old firmware, we need to update to at
 least version 5.8 for OpenOCD to work. You also need to enable OpenOCD support
 in some versions. See [this](http://dangerousprototypes.com/docs/Bus_Pirate#JTAG_and_OpenOCD) table:
 
@@ -25,14 +25,14 @@ the precompiled hex with the pirate-loader program.
 $ git clone https://github.com/BusPirate/Bus_Pirate.git
 ```
 
-### Putting the BusPirate into Bootloader mode
+### Putting the Bus Pirate into Bootloader mode
 
-Check what port the BusPirate is on (in my case /dev/ttyUSB0) and setup a
+Check what port the Bus Pirate is on (in my case /dev/ttyUSB0) and setup a
 serial terminal.
 ```
 $ sudo screen /dev/ttyUSB0 115200
 ```
-In the serial terminal we put the BusPirate into Bootloader mode
+In the serial terminal we put the Bus Pirate into Bootloader mode
 ```
 HiZ>$
 Are you sure? y
@@ -44,7 +44,7 @@ the pirate-loader needs the connection.
 ### Updating
 
 Now go into the `BusPirate/package/BPvx-firmware/` directory, with
-x being the version of your BusPirate, I have a BusPirate v3. Than you could use
+x being the version of your Bus Pirate, I have a Bus Pirate v3. Than you could use
 the precompiled `pirate-loader_lnx` program. This did not work for me,
 so I went into the `pirate-loader-source` and build the program myself.
 ```

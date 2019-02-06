@@ -1,15 +1,14 @@
 .syntax	unified
 .arch	armv7-m
 
-.global	_stack_top
+.global	__StackTop
 
 .section .isr_vector
 .align	2
 .global _isr_vector
 _isr_vector:
-	.long	_stack_top
+	.long	__StackTop /* we will need this later */
 	.long	reset
-
 	.long	default
 	.long	default
 	.long	default
@@ -38,6 +37,7 @@ reset:
 loop:
 	add	r0, r0, #1
 	b	loop
+
 
 default:
 	b	.
