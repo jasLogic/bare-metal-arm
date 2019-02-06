@@ -1,5 +1,41 @@
 # First Program and Linkerscript
 
+## Explanation
+For a great explanation on how most of the code works read [this](http://www.bravegnu.org/gnu-eprog/)
+till chapter 7. It is a great tutorial which explains assembler and linker
+scripts.
+
+I just added some directives which you can look up [here](https://sourceware.org/binutils/docs/as/)
+and [here](https://sourceware.org/binutils/docs/as/ARM-Directives.html).
+There is also a vector table which was set up according to the
+[RM0008 Reference manual](https://www.st.com/content/ccc/resource/technical/document/reference_manual/59/b9/ba/7f/11/af/43/d5/CD00171190.pdf/files/CD00171190.pdf/jcr:content/translations/en.CD00171190.pdf). Here is a copy of the first few mandatory
+vectors:
+
+| Name          | Address |
+|---------------|---------|
+| -             | 0x0000  |
+| Reset         | 0x0004  |
+| NMI           | 0x0008  |
+| HardFault     | 0x000C  |
+| MemManage     | 0x0010  |
+| BusFault      | 0x0014  |
+| UsageFault    | 0x0018  |
+| -             | 0x001C  |
+| -             | 0x0020  |
+| -             | 0x0024  |
+| -             | 0x0028  |
+| SVCall        | 0x002C  |
+| Debug Monitor | 0x0030  |
+| -             | 0x0034  |
+| PendSV        | 0x0038  |
+| SysTick       | 0x003C  |
+
+For this example all vectors except reset are set to default. The reset vector
+is the one called on startup and reset.
+I already put the stack pointer at address `0x0` even though we do not need
+it at the moment but it will be very helpful later. You could just leave
+this empty.
+
 ## Connecting the Bus Pirate to the STM32F103x8
 According to [this table for Bus Pirate to JTAG](http://dangerousprototypes.com/docs/Bus_Pirate_JTAG_connections_for_OpenOCD)
 and [the STM32F103x8 datasheet](https://www.st.com/resource/en/datasheet/stm32f103tb.pdf)

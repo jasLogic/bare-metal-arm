@@ -5,13 +5,18 @@ Getting started with ARM using OpenOCD and the BusPirate
 |:----------:|
 | I am no expert whatsoever. I created this repository mainly do document my process and help others who try to get started with ARM programming. The code and knowledge came mainly from reading online and looking into the example files of the arm toolchain. Any help, suggestions or criticism are welcome. |
 
+This repository documents my progress with learning about ARM microcontrollers,
+the arm-none-eabi toolchain, OpenOCD and the Bus Pirate. I created it as a
+reference for others who try to learn the bare-metal basics.
+
+I am using a STM32F103C8 microcontroller (the "bluepill") with a
+Bus Pirate v3.
+
 **TODO**
   1. How to install arm-none-eabi toolchain
   2. Installing OpenOCD
-  4. First Program and Linkerscript (in progress)
-  5. Blinking a LED
   6. Blinking in C
-  7. Settin up a Makefile
+  7. Setting up a Makefile
   8. Using the Standard Library
 
 ## Online sources

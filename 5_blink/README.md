@@ -11,7 +11,7 @@ bit 4 enables GPIO port C so it is set to 1.
 ### GPIOC_CRH
 The `GPIOC_CRH` register configures the high GPIOs (there is a GPIOC_CRL).
 See the [RM0008 Reference manual](https://www.st.com/content/ccc/resource/technical/document/reference_manual/59/b9/ba/7f/11/af/43/d5/CD00171190.pdf/files/CD00171190.pdf/jcr:content/translations/en.CD00171190.pdf) on pages 161 and 172 for more information.
-In the code I configure `PC13` (the onboard LED) to be a output.
+In the code I configure `PC13` (the onboard LED) to be an output.
 
 ### GPIOC_BSRR
 This register sets GPIOs in the lower 16 bits and clears them in the higher 16.
