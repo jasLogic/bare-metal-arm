@@ -37,13 +37,13 @@ reset:
 	ldr	r1, =(1 << 4)
 	str	r1, [r0]
 
-	/* enable pin 13 as output in GPIOC_CRH */
+	/* set PC13 as output in GPIOC_CRH */
 	ldr	r0, =(0x40011000 + 0x04)
 	ldr	r1, =(1 << 20)
 	str	r1, [r0]
 
 loop:
-	/* set pin 13 in GPIOC_BSRR register */
+	/* set PC13 in GPIOC_BSRR register */
 	ldr	r0, =(0x40011000 + 0x10)
 	ldr	r1, =(1 << 13)
 	str	r1, [r0]
@@ -56,7 +56,7 @@ delay1:
 	cmp	r0, r1
 	bne	delay1
 
-	/* reset pin 13 in GPIOC_BRR reister */
+	/* reset PC13 in GPIOC_BRR reister */
 	ldr	r0, =(0x40011000 + 0x14)
 	ldr	r1, =(1 << 13)
 	str	r1, [r0]
