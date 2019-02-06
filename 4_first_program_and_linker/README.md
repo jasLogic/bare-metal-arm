@@ -74,6 +74,8 @@ sp             0x20005000          0x20005000
 pc             0x800004c           0x800004c
     (...)
 ```
-Notice that r0 incremented by one and that r1 is 42 which we set in main.s
-Also take a look at the sp (stack pointer), it has the value which we defined at address `0x8000000` with `_stack_top`.
-Another interesting thing to know is the pc (program counter). Its value is always the address of the instrucion which is executed at the time.
+Notice that r0 incremented by one and that r1 is 42 which we set in main.s.
+Also take a look at the sp (stack pointer), it has the value which we defined
+at address `0x8000000` with `_stack_top`.
+Another interesting thing to know is the pc (program counter).
+Its value is always the address of the instrucion which is executed at the time.
