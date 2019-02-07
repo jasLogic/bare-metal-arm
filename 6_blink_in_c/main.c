@@ -9,10 +9,6 @@ static const int read_only_data = 27182;
 
 int main(void)
 {
-	/*
-	initialized_data += ro_data;
-	uninitialized_data = initialized_data;*/
-
 	/* enable the GPIOC clock in RCC_APB2ENR register */
 	RCC_APB2ENR = (1 << 4);
 	/* set PC13 as output in GPIOC_CRH */
@@ -20,13 +16,13 @@ int main(void)
 
 	while(1) {
 		int i;
-
-		/* set PC13 in GPIOC_BSRR register */
-		GPIOC_BSRR = (1 << 13);
-		/* delay loop */
-		for(i = 0; i < 200000; ++i);
+		/* we reset first because the LED is connected to Vcc and sinks current */
 		/* reset PC13 in GPIOC_BRR reister */
 		GPIOC_BRR = (1 << 13);
+		/* delay loop */
+		for(i = 0; i < 200000; ++i);
+		/* set PC13 in GPIOC_BSRR register */
+		GPIOC_BSRR = (1 << 13);
 		/* delay loop */
 		for(i = 0; i < 200000; ++i);
 	}

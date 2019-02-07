@@ -3,7 +3,7 @@ MEMORY {
 	RAM (rwx): ORIGIN = 0x20000000, LENGTH = 20K
 }
 
-ENTRY(reset)
+ENTRY(Reset_Handler)
 SECTIONS
 {	.text : {
 		KEEP(* (.isr_vector))

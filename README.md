@@ -15,9 +15,8 @@ Bus Pirate v3.
 **TODO**
   * How to install arm-none-eabi toolchain
   * Installing OpenOCD
-  * Blinking in C
-  * Setting up a Makefile
-  * Using the Standard Library
+  * Using the Standard Library (in progress)
+  * Using the STM32F10x standard peripheral library
 
 ## Online sources
 **Some useful pieces of documentation which helped me get started**

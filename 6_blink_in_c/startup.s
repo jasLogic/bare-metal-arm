@@ -8,31 +8,30 @@
 .global _isr_vector
 _isr_vector:
 	.long	__StackTop
-	.long	reset
-	.long	nmi_handler
-	.long	hardfault_handler
-	.long	memmanage_handler
-	.long	busfault_handler
-	.long	usagefault_handler
+	.long	Reset_Handler
+	.long	NMI_Handler
+	.long	HardFault_Handler
+	.long	MemManage_Handler
+	.long	BusFault_Handler
+	.long	UsageFault_Handler
 	.long	0
 	.long	0
 	.long	0
 	.long	0
-	.long	svc_handler
-	.long	debugmonitor_handler
+	.long	SVC_Handler
+	.long	DebugMon_Handler
 	.long	0
-	.long	pendsv_handler
-	.long	systick_handler
-
-	.long	default
+	.long	PendSV_Handler
+	.long	SysTick_Handler
+	
 
 .text
 .thumb
 .thumb_func
 .align	2
-.global	reset
-.type	reset, %function
-reset:
+.global	Reset_Handler
+.type	Reset_Handler, %function
+Reset_Handler:
 	/* copy variables from flash to ram */
 	ldr	r1, =__etext
 	ldr	r2, =__data_start__
@@ -60,23 +59,23 @@ zloop:
 
 /* make a weak default handler so that interrupt handlers can overwrite this */
 .thumb_func
-.weak	default
-.type	default, %function
-default:
+.weak	Default_Handler
+.type	Default_Handler, %function
+Default_Handler:
 	b	.
 
 /* creating a macro to create weak default handlers which are set to thr default handler */
 .macro	def_irq handler
 .weak	\handler
-.set	\handler, default
+.set	\handler, Default_Handler
 .endm
 
-def_irq	nmi_handler
-def_irq	hardfault_handler
-def_irq	memmanage_handler
-def_irq	busfault_handler
-def_irq	usagefault_handler
-def_irq	svc_handler
-def_irq	debugmonitor_handler
-def_irq	pendsv_handler
-def_irq	systick_handler
+def_irq	NMI_Handler
+def_irq	HardFault_Handler
+def_irq	MemManage_Handler
+def_irq	BusFault_Handler
+def_irq	UsageFault_Handler
+def_irq	SVC_Handler
+def_irq	DebugMon_Handler
+def_irq	PendSV_Handler
+def_irq	SysTick_Handler
