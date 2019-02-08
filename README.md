@@ -16,7 +16,6 @@ Bus Pirate v3.
   * How to install arm-none-eabi toolchain
   * Installing OpenOCD
   * Using the Standard Library (in progress)
-  * Using the STM32F10x standard peripheral library
 
 ## Online sources
 **Some useful pieces of documentation which helped me get started**
@@ -29,3 +28,4 @@ Bus Pirate v3.
 * [This Article is very informative](https://www.embedded.com/design/mcus-processors-and-socs/4007119/Building-Bare-Metal-ARM-Systems-with-GNU-Part-1--Getting-Started)
 * [STM32F103x8 datasheet](https://www.st.com/resource/en/datasheet/stm32f103tb.pdf)
 * [RM0008 Reference manual](https://www.st.com/content/ccc/resource/technical/document/reference_manual/59/b9/ba/7f/11/af/43/d5/CD00171190.pdf/files/CD00171190.pdf/jcr:content/translations/en.CD00171190.pdf)
+* [STM32F10x standard peripheral library](https://www.st.com/content/st_com/en/products/embedded-software/mcus-embedded-software/stm32-embedded-software/stm32-standard-peripheral-libraries/stsw-stm32054.html)
