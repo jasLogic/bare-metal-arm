@@ -2,7 +2,7 @@
 **Note** that I did not use the ARM standard library in this example, the
 `-nostdlib` flag is set.
 
-## Changes is startup.s
+## Changes in startup.s
 Like in many examples and in the STM32F10x standard peripheral library I
 added a `SystemInit` function which sets the system clock to its reset value.
 The function is weak and can thus be overwritten by another `SystemInit`
@@ -20,7 +20,7 @@ The `SET_BIT` and `CLEAR_BIT` macros are defined in the library:
 ```
 
 There now is a `SystemInit` function which runs before main and overwrites
-the `SystemInit` function in startup.s.
+the `SystemInit` function in `startup.s`.
 It configures the system clock to use the external oscillator and sets the
 PLL in a way that the system clock runs on 72 MHz (the maximum).
 
@@ -33,7 +33,7 @@ peripheral library needs this information.
 There also is a `INCLUDES` variable which adds the paths of two directories
 where the STM32F10x standard peripheral library is located.
 
-## The standard peripheral **driver** library
+## The standard peripheral driver library
 In this example I am only including the CMIS library. You could easily
 also include the peripheral driver library by, of course, including
 it into your project and adding it to the path in the `Makefile` like this:
