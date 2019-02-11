@@ -1,7 +1,7 @@
-#define RCC_APB2ENR	*((int *)(0x40021000 + 0x18))
-#define GPIOC_CRH	*((int *)(0x40011000 + 0x04))
-#define GPIOC_BSRR	*((int *)(0x40011000 + 0x10))
-#define GPIOC_BRR	*((int *)(0x40011000 + 0x14))
+#define RCC_APB2ENR	*((unsigned int *)(0x40021000 + 0x18))
+#define GPIOC_CRH	*((unsigned int *)(0x40011000 + 0x04))
+#define GPIOC_BSRR	*((unsigned int *)(0x40011000 + 0x10))
+#define GPIOC_BRR	*((unsigned int *)(0x40011000 + 0x14))
 
 static int initialized_data = 31415;
 static int uninitialized_data;
