@@ -13,8 +13,7 @@ I am using a STM32F103C8 microcontroller (the "bluepill") with a
 Bus Pirate v3.
 
 **TODO**
-  * How to install arm-none-eabi toolchain
-  * Installing OpenOCD
+  * Installing OpenOCD from source
   * Using the Standard Library (in progress)
 
 ## Online sources
